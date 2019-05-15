@@ -29,16 +29,18 @@
         private void InitializeComponent()
         {
             this.pnlFiltro = new System.Windows.Forms.GroupBox();
-            this.pnlFabricantes = new System.Windows.Forms.GroupBox();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.lblPis = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.cboPais = new System.Windows.Forms.ComboBox();
             this.btnLimpiar = new System.Windows.Forms.Button();
+            this.cboPais = new System.Windows.Forms.ComboBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.lblPis = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.pnlFabricantes = new System.Windows.Forms.GroupBox();
             this.grdDatos = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
             this.btnRegresar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.tbnNuevo = new System.Windows.Forms.Button();
             this.pnlFiltro.SuspendLayout();
             this.pnlFabricantes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdDatos)).BeginInit();
@@ -62,6 +64,57 @@
             this.pnlFiltro.Text = "Filtros";
             this.pnlFiltro.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Location = new System.Drawing.Point(466, 46);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(100, 30);
+            this.btnLimpiar.TabIndex = 6;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            // 
+            // cboPais
+            // 
+            this.cboPais.FormattingEnabled = true;
+            this.cboPais.Location = new System.Drawing.Point(91, 57);
+            this.cboPais.Name = "cboPais";
+            this.cboPais.Size = new System.Drawing.Size(200, 23);
+            this.cboPais.TabIndex = 5;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(331, 47);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(100, 30);
+            this.btnBuscar.TabIndex = 4;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(91, 30);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(200, 21);
+            this.txtNombre.TabIndex = 2;
+            // 
+            // lblPis
+            // 
+            this.lblPis.AutoSize = true;
+            this.lblPis.Location = new System.Drawing.Point(10, 61);
+            this.lblPis.Name = "lblPis";
+            this.lblPis.Size = new System.Drawing.Size(39, 15);
+            this.lblPis.TabIndex = 1;
+            this.lblPis.Text = "Pais:";
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(7, 30);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(58, 45);
+            this.lblNombre.TabIndex = 0;
+            this.lblNombre.Text = "Nombre\r\n\r\n:";
+            // 
             // pnlFabricantes
             // 
             this.pnlFabricantes.Controls.Add(this.grdDatos);
@@ -73,74 +126,26 @@
             this.pnlFabricantes.TabStop = false;
             this.pnlFabricantes.Text = "Fabricantes";
             // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(7, 30);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(58, 45);
-            this.lblNombre.TabIndex = 0;
-            this.lblNombre.Text = "Nombre\r\n\r\n:";
-            // 
-            // lblPis
-            // 
-            this.lblPis.AutoSize = true;
-            this.lblPis.Location = new System.Drawing.Point(10, 61);
-            this.lblPis.Name = "lblPis";
-            this.lblPis.Size = new System.Drawing.Size(39, 15);
-            this.lblPis.TabIndex = 1;
-            this.lblPis.Text = "Pais:";
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Location = new System.Drawing.Point(91, 30);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(200, 21);
-            this.txtNombre.TabIndex = 2;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Location = new System.Drawing.Point(331, 47);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(100, 30);
-            this.btnBuscar.TabIndex = 4;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            // 
-            // cboPais
-            // 
-            this.cboPais.FormattingEnabled = true;
-            this.cboPais.Location = new System.Drawing.Point(91, 57);
-            this.cboPais.Name = "cboPais";
-            this.cboPais.Size = new System.Drawing.Size(121, 23);
-            this.cboPais.TabIndex = 5;
-            // 
-            // btnLimpiar
-            // 
-            this.btnLimpiar.Location = new System.Drawing.Point(466, 46);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(100, 30);
-            this.btnLimpiar.TabIndex = 6;
-            this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.UseVisualStyleBackColor = true;
-            // 
             // grdDatos
             // 
             this.grdDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdDatos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdDatos.Location = new System.Drawing.Point(3, 16);
+            this.grdDatos.MultiSelect = false;
             this.grdDatos.Name = "grdDatos";
+            this.grdDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grdDatos.Size = new System.Drawing.Size(635, 209);
             this.grdDatos.TabIndex = 0;
             // 
-            // button1
+            // btnEditar
             // 
-            this.button1.Location = new System.Drawing.Point(150, 432);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnEditar.Location = new System.Drawing.Point(280, 425);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(100, 30);
+            this.btnEditar.TabIndex = 1;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnRegresar
             // 
@@ -151,19 +156,42 @@
             this.btnRegresar.Text = "Regresar";
             this.btnRegresar.UseVisualStyleBackColor = true;
             // 
+            // btnEliminar
+            // 
+            this.btnEliminar.ForeColor = System.Drawing.Color.Red;
+            this.btnEliminar.Location = new System.Drawing.Point(435, 425);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(100, 30);
+            this.btnEliminar.TabIndex = 3;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            // 
+            // tbnNuevo
+            // 
+            this.tbnNuevo.Location = new System.Drawing.Point(152, 425);
+            this.tbnNuevo.Name = "tbnNuevo";
+            this.tbnNuevo.Size = new System.Drawing.Size(100, 30);
+            this.tbnNuevo.TabIndex = 4;
+            this.tbnNuevo.Text = "Nuevo";
+            this.tbnNuevo.UseVisualStyleBackColor = true;
+            this.tbnNuevo.Click += new System.EventHandler(this.tbnNuevo_Click);
+            // 
             // FrmFabricantes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 523);
             this.ControlBox = false;
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.tbnNuevo);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.pnlFabricantes);
             this.Controls.Add(this.pnlFiltro);
             this.Name = "FrmFabricantes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestion de Fabricantes";
+            this.Load += new System.EventHandler(this.FrmFabricantes_Load);
             this.pnlFiltro.ResumeLayout(false);
             this.pnlFiltro.PerformLayout();
             this.pnlFabricantes.ResumeLayout(false);
@@ -183,7 +211,9 @@
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.GroupBox pnlFabricantes;
         private System.Windows.Forms.DataGridView grdDatos;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnRegresar;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button tbnNuevo;
     }
 }
